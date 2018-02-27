@@ -1,8 +1,14 @@
 package boletin21;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -31,17 +37,20 @@ public class Metodos {
         }
     }
     
-    public void pasarFichero(){
-        fichero = new File("C:\\Users\\Sauky\\Documents\\NetBeansProjects\\Boletin21\\files\\lista.txt");
+    public void Fichero(){
+        //Fichero a escribir
+        fichero = new File("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\Boletin21\\files\\lista.txt");
         
         try{
             f1 = new FileWriter(fichero);
             for(int i=0; i<lista.size();i++){
-                f1.write((i+1)+". "+lista.get(i));
+                f1.write("\n"+(i+1)+". "+lista.get(i)+"\n");
             }
             f1.close();
         }catch (IOException e){
             System.out.println("Error al describir");
         }
     }
+    
+    
 }

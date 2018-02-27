@@ -8,7 +8,7 @@ public class Boletin21 {
         
         M1.escribir();
         M1.ordenar();
-        M1.pasarFichero();
+        M1.Fichero();
     }
     
 }
